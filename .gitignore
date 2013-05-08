@@ -1,0 +1,39 @@
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+Makefile
+*-build-*
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Built windows .exe and linux binaries
+*.exe
+*.dll
+SMT_Converter
+
+# Debug and Release directories (created under Windows, not Linux)
+Debug/
+Release/

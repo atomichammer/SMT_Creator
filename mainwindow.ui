@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QSlider" name="slPos">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>190</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>396</width>
+           <height>678</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QGroupBox" name="Info">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>160</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Info</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="1" column="1">
+              <widget class="QLabel" name="lbDesignator2">
+               <property name="text">
+                <string>Name:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Tape:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QPushButton" name="pbSet">
+               <property name="text">
+                <string>Set</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>Angle:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="lbDesignator">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QSpinBox" name="sbCoordX">
+               <property name="maximum">
+                <number>75000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="2">
+              <widget class="QSpinBox" name="sbCoordY">
+               <property name="maximum">
+                <number>75000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Y</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>X</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QRadioButton" name="rbMulti">
+               <property name="text">
+                <string>Multi</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QRadioButton" name="rbSingle">
+               <property name="text">
+                <string>Single</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QSpinBox" name="sbAngle">
+               <property name="minimum">
+                <number>-180</number>
+               </property>
+               <property name="maximum">
+                <number>180</number>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QComboBox" name="cbTape"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="Groups">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>160</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Groups</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="3" column="1">
+              <widget class="QPushButton" name="pbSetGroupTape">
+               <property name="text">
+                <string>Set Tape</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPushButton" name="pbRemoveGroup">
+               <property name="text">
+                <string>Remove</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QPushButton" name="pbRestore">
+               <property name="text">
+                <string>Restore</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QPushButton" name="pbSub90">
+               <property name="text">
+                <string>-90</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QPushButton" name="pbAdd90">
+               <property name="text">
+                <string>+90</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QPushButton" name="pbRotate">
+               <property name="text">
+                <string>Rotate</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QSpinBox" name="sbRotateAngle">
+               <property name="minimum">
+                <number>-360</number>
+               </property>
+               <property name="maximum">
+                <number>360</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="2">
+              <widget class="QListView" name="listView">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QSpinBox" name="sbGroupTape"/>
+             </item>
+             <item row="7" column="0" colspan="2">
+              <widget class="QPushButton" name="pbRotSel">
+               <property name="text">
+                <string>Rotate Selected</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="BasicSettings">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>160</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Basic Settings</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>X</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Y</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="sbZeroX">
+               <property name="maximum">
+                <number>75000</number>
+               </property>
+               <property name="value">
+                <number>61635</number>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QSpinBox" name="sbZeroY">
+               <property name="maximum">
+                <number>70000</number>
+               </property>
+               <property name="value">
+                <number>1838</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QSpinBox" name="sbStepsPerMm">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>200</number>
+               </property>
+               <property name="value">
+                <number>197</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Steps per mm:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>880</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionImport_SMT"/>
+    <addaction name="actionImport_CSV"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_SMT"/>
+    <addaction name="separator"/>
+    <addaction name="actionBasicSettings"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionSort_By"/>
+    <addaction name="actionAddPart"/>
+    <addaction name="actionDeleteSelected"/>
+    <addaction name="separator"/>
+    <addaction name="actionFlipH"/>
+    <addaction name="actionFlipV"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove_and_Rotate"/>
+    <addaction name="actionChangeGroup"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionImport_SMT"/>
+   <addaction name="actionImport_CSV"/>
+   <addaction name="actionSave_SMT"/>
+   <addaction name="separator"/>
+   <addaction name="actionSort_By"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddPart"/>
+   <addaction name="actionDeleteSelected"/>
+   <addaction name="separator"/>
+   <addaction name="actionFlipH"/>
+   <addaction name="actionFlipV"/>
+   <addaction name="separator"/>
+   <addaction name="actionMove_and_Rotate"/>
+   <addaction name="separator"/>
+   <addaction name="actionBasicSettings"/>
+   <addaction name="actionShow_Groups_Dialog"/>
+   <addaction name="actionBasicGroupsDialog"/>
+   <addaction name="actionChangeGroup"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionImport_SMT">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/System-Binary-icon.png</normaloff>:/icons/icons/System-Binary-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import SMT</string>
+   </property>
+  </action>
+  <action name="actionImport_CSV">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/csv_file.png</normaloff>:/icons/icons/csv_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import CSV</string>
+   </property>
+  </action>
+  <action name="actionSave_SMT">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/filesave.png</normaloff>:/icons/icons/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save SMT</string>
+   </property>
+  </action>
+  <action name="actionSort_By">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/sort-ascending-icon.png</normaloff>:/icons/icons/sort-ascending-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sort By</string>
+   </property>
+   <property name="toolTip">
+    <string>Sort place order</string>
+   </property>
+  </action>
+  <action name="actionAddPart">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/edit_add.png</normaloff>:/icons/icons/edit_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Element</string>
+   </property>
+   <property name="toolTip">
+    <string>Add Element</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actionBasicSettings">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/gear.png</normaloff>:/icons/icons/gear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Basic Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Basic Settings</string>
+   </property>
+  </action>
+  <action name="actionFlipH">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Actions-object-flip-horizontal-icon.png</normaloff>:/icons/icons/Actions-object-flip-horizontal-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mirror Horizontally</string>
+   </property>
+  </action>
+  <action name="actionFlipV">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Actions-object-flip-vertical-icon.png</normaloff>:/icons/icons/Actions-object-flip-vertical-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mirror Vertically</string>
+   </property>
+  </action>
+  <action name="actionDeleteSelected">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/edit_remove.png</normaloff>:/icons/icons/edit_remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Selected Chips</string>
+   </property>
+   <property name="toolTip">
+    <string>Deletes Selected Items</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionMove_and_Rotate">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/designet.png</normaloff>:/icons/icons/designet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move and Rotate</string>
+   </property>
+  </action>
+  <action name="actionShow_Groups_Dialog">
+   <property name="text">
+    <string>Show Groups Dialog</string>
+   </property>
+  </action>
+  <action name="actionBasicGroupsDialog">
+   <property name="text">
+    <string>Show Basic Groups Dialog</string>
+   </property>
+  </action>
+  <action name="actionChangeGroup">
+   <property name="text">
+    <string>ChangeGroup</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

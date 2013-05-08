@@ -1,0 +1,12 @@
+#ifndef QGN_EXPORT_GLOBAL_H
+#define QGN_EXPORT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(QGN_EXPORT_LIBRARY)
+#  define QGN_EXPORTSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define QGN_EXPORTSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // QGN_EXPORT_GLOBAL_H
