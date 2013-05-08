@@ -149,10 +149,19 @@ bool MainWindow::openFile(QString extension)
     QString filename;
     Settings *settings = Settings::Instance();
     QStringList *lastFiles = settings->getLastFiles();
-    QFileInfo fileInfo;
-    fileInfo.setFile(lastFiles->at(0));
-    QString path = fileInfo.absolutePath();
-    qDebug() << path;
+
+    QString path;
+    if(lastFiles->isEmpty())
+    {
+        path = "";
+    }
+    else
+    {
+        QFileInfo fileInfo;
+        fileInfo.setFile(lastFiles->at(0));
+        path = fileInfo.absolutePath();
+    }
+
     filename = QFileDialog::getOpenFileName(this, tr("Select Coords File"),
                 path,
                 tr("Data (*.%1)").arg(extension));
@@ -189,10 +198,8 @@ void MainWindow::loadFile(const QString &filename)
     } else {
         DocumentWidget * newDocWidget;
         newDocWidget = new DocumentWidget(this, filename);
-        //updateGroupsList(newDocWidget->getGroups());
         connect(newDocWidget, SIGNAL(selectionChanged(Chip *)), this, SLOT(loadElement(Chip *)));
         connect(newDocWidget, SIGNAL(selectionChanged(int)), this, SLOT(selectionChanged(int)));
-        //connect(newDocWidget, SIGNAL(groupsChanged(QList<int>)), this, SLOT(updateGroupsList(QList<int>)));
         connect(newDocWidget, SIGNAL(mousePos(QPoint)), this, SLOT(acceptCoords(QPoint)));
 
         QFileInfo *info = new QFileInfo(filename);
@@ -200,23 +207,9 @@ void MainWindow::loadFile(const QString &filename)
         tabWidget->setCurrentIndex(tabWidget->addTab(newDocWidget, info->fileName()));
         docWidget = newDocWidget;
 
-        //ui->listView->setModel(docWidget->getGroupsModel());
-//        ui->tableView->resizeColumnsToContents();
-
-
-        //statusBar()->showMessage(tr("File %1 Opened!").arg(info->fileName()), 5000);
         delete info;
     }
 
-}
-
-void MainWindow::updateGroupsList(QList<int> groups)
-{
-//    ui->lwGroups->clear();
-//    for(int i = 0; i < groups.count(); i++)
-//    {
-//        ui->lwGroups->addItem(QString("Group_%1").arg(groups.at(i)));
-//    }
 }
 
 void MainWindow::loadElement(Chip *chip)
@@ -245,12 +238,6 @@ void MainWindow::on_sbZeroY_valueChanged(int val)
     settings->setZeroY(val);
 }
 
-void MainWindow::on_sbStepsPerMm_valueChanged(int val)
-{
-    //Settings *settings = Settings::Instance();
-    //settings->setStepsPerMm(val);
-}
-
 void MainWindow::on_pbSet_clicked()
 {
 //    moving coordinates
@@ -268,20 +255,6 @@ void MainWindow::on_pbSet_clicked()
         }
     }
 }
-
-void MainWindow::on_lwGroups_clicked(QModelIndex index)
-{
-//    if(docWidget)
-//    {
-//        QString k = index.data().toString();
-//        k = k.mid(k.indexOf("_") + 1, k.length()-1);
-//        int id = k.toInt();
-//        docWidget->selectByGroup(id);
-//        ui->sbGroupTape->setValue(id+1);
-//    }
-}
-
-
 
 void MainWindow::rotate(double angle)
 {
@@ -635,25 +608,6 @@ void MainWindow::on_actionShow_Groups_Dialog_triggered()
         delete dialog;
     }
 }
-
-//void MainWindow::on_actionBasicGroupsDialog_triggered()
-//{
-//    if(docWidget)
-//    {
-//        Settings *settings = Settings::Instance();
-//        BasicGroupsDialog *dialog = new BasicGroupsDialog(this);
-//        dialog->setModel(settings->getBasicGroups());
-
-//        if(dialog->exec() == QDialog::Accepted)
-//        {
-//            settings->saveBasicGroups();
-//        } else
-//        {
-//            settings->loadBasicGroups();
-//        }
-//        delete dialog;
-//    }
-//}
 
 void MainWindow::on_actionBasicGroupsDialog_triggered()
 {

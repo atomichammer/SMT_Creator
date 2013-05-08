@@ -42,7 +42,6 @@ public slots:
     bool openFile(QString extension);
     void handleMessage(const QString& message);
     void tabChanged(int i);
-    void updateGroupsList(QList<int> groups);
     void pasteElements();
     void copyElements();
 signals:
@@ -58,9 +57,7 @@ private slots:
     void selectionChanged(int count);
     void on_sbZeroX_valueChanged(int );
     void on_sbZeroY_valueChanged(int );
-    void on_sbStepsPerMm_valueChanged(int );
     void on_pbSet_clicked();
-    void on_lwGroups_clicked(QModelIndex index);
     void on_pbSetGroupTape_clicked();
     void on_pbSub90_clicked();
     void on_pbAdd90_clicked();

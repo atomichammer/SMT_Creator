@@ -23,6 +23,7 @@ INPUT(
 ./release\groupsaclmodel.o
 ./release\addacldialog.o
 ./release\groupsaclfilter.o
+./release\changegroupdialog.o
 ./release\moc_qtsingleapplication.o
 ./release\moc_qtlocalpeer.o
 ./release\moc_mainwindow.o
@@ -45,5 +46,6 @@ INPUT(
 ./release\moc_groupsaclmodel.o
 ./release\moc_addacldialog.o
 ./release\moc_groupsaclfilter.o
+./release\moc_changegroupdialog.o
 ./release\qrc_icons.o
 );
