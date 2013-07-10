@@ -17,6 +17,7 @@ Elements::Elements(QObject *parent) :
     footprints = new QStringList;
     groupsModel = new GroupsModel();
     connect(groupsModel, SIGNAL(changed(QModelIndex)), this, SLOT(hideGroupElements(QModelIndex)));
+    divisor = 1;
 }
 
 bool Elements::loadBinaryFile(QString &fileName)

@@ -117,6 +117,13 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>sbFirstX</tabstop>
+  <tabstop>sbFirstY</tabstop>
+  <tabstop>sbSecondX</tabstop>
+  <tabstop>sbSecondY</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

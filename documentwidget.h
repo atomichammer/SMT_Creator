@@ -50,6 +50,7 @@ public:
     QList<Chip *> getSelectedElements();
     void pasteElements(QList<Chip *> *pasteBuffer);
     void updateScene();
+    bool saveToSVG();
 signals:
     void selectedElement(Chip *);
     void selectionChanged(int);
@@ -75,6 +76,7 @@ private:
     bool saveToBinary(QString fileName, int num, bool selectedOnly);
     void rescanGroups();
     bool changed;
+    char divisor;
     
 };
 

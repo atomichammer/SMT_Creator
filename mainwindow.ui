@@ -69,8 +69,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>396</width>
-           <height>678</height>
+           <width>412</width>
+           <height>500</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -94,6 +94,12 @@
             <layout class="QGridLayout" name="gridLayout">
              <item row="1" column="1">
               <widget class="QLabel" name="lbDesignator2">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="text">
                 <string>Name:</string>
                </property>
@@ -101,6 +107,12 @@
              </item>
              <item row="4" column="1">
               <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="text">
                 <string>Tape:</string>
                </property>
@@ -115,6 +127,12 @@
              </item>
              <item row="5" column="1">
               <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="text">
                 <string>Angle:</string>
                </property>
@@ -143,6 +161,12 @@
              </item>
              <item row="7" column="1">
               <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="text">
                 <string>Y</string>
                </property>
@@ -150,6 +174,12 @@
              </item>
              <item row="6" column="1">
               <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="text">
                 <string>X</string>
                </property>
@@ -172,18 +202,19 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="2">
-              <widget class="QSpinBox" name="sbAngle">
-               <property name="minimum">
-                <number>-180</number>
-               </property>
-               <property name="maximum">
-                <number>180</number>
+             <item row="4" column="2">
+              <widget class="QLabel" name="lbTape">
+               <property name="text">
+                <string/>
                </property>
               </widget>
              </item>
-             <item row="4" column="2">
-              <widget class="QComboBox" name="cbTape"/>
+             <item row="5" column="2">
+              <widget class="QLabel" name="lbAngle">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -206,58 +237,10 @@
              <string>Groups</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_4">
-             <item row="3" column="1">
-              <widget class="QPushButton" name="pbSetGroupTape">
-               <property name="text">
-                <string>Set Tape</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
+             <item row="3" column="0">
               <widget class="QPushButton" name="pbRemoveGroup">
                <property name="text">
                 <string>Remove</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QPushButton" name="pbRestore">
-               <property name="text">
-                <string>Restore</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QPushButton" name="pbSub90">
-               <property name="text">
-                <string>-90</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QPushButton" name="pbAdd90">
-               <property name="text">
-                <string>+90</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="0">
-              <widget class="QPushButton" name="pbRotate">
-               <property name="text">
-                <string>Rotate</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QSpinBox" name="sbRotateAngle">
-               <property name="minimum">
-                <number>-360</number>
-               </property>
-               <property name="maximum">
-                <number>360</number>
-               </property>
-               <property name="value">
-                <number>0</number>
                </property>
               </widget>
              </item>
@@ -274,112 +257,8 @@
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
-              <widget class="QSpinBox" name="sbGroupTape"/>
-             </item>
-             <item row="7" column="0" colspan="2">
-              <widget class="QPushButton" name="pbRotSel">
-               <property name="text">
-                <string>Rotate Selected</string>
-               </property>
-              </widget>
-             </item>
             </layout>
            </widget>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="BasicSettings">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>160</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="title">
-             <string>Basic Settings</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_3">
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>X</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_8">
-               <property name="text">
-                <string>Y</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QSpinBox" name="sbZeroX">
-               <property name="maximum">
-                <number>75000</number>
-               </property>
-               <property name="value">
-                <number>61635</number>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QSpinBox" name="sbZeroY">
-               <property name="maximum">
-                <number>70000</number>
-               </property>
-               <property name="value">
-                <number>1838</number>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QSpinBox" name="sbStepsPerMm">
-               <property name="minimum">
-                <number>1</number>
-               </property>
-               <property name="maximum">
-                <number>200</number>
-               </property>
-               <property name="value">
-                <number>197</number>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_9">
-               <property name="text">
-                <string>Steps per mm:</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
@@ -395,7 +274,7 @@
      <x>0</x>
      <y>0</y>
      <width>880</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -406,6 +285,7 @@
     <addaction name="actionImport_CSV"/>
     <addaction name="separator"/>
     <addaction name="actionSave_SMT"/>
+    <addaction name="actionSaveToSVG"/>
     <addaction name="separator"/>
     <addaction name="actionBasicSettings"/>
     <addaction name="separator"/>
@@ -414,15 +294,21 @@
     <property name="title">
      <string>&amp;Edit</string>
     </property>
-    <addaction name="actionSort_By"/>
     <addaction name="actionAddPart"/>
     <addaction name="actionDeleteSelected"/>
+    <addaction name="actionRotateC90"/>
+    <addaction name="actionRotateC270"/>
+    <addaction name="actionChangeGroup"/>
     <addaction name="separator"/>
+    <addaction name="actionActionRotateAll90"/>
+    <addaction name="actionRotateAll270"/>
+    <addaction name="actionSort_By"/>
     <addaction name="actionFlipH"/>
     <addaction name="actionFlipV"/>
-    <addaction name="separator"/>
     <addaction name="actionMove_and_Rotate"/>
-    <addaction name="actionChangeGroup"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_Groups_Dialog"/>
+    <addaction name="actionBasicGroupsDialog"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -437,23 +323,41 @@
    <addaction name="actionImport_SMT"/>
    <addaction name="actionImport_CSV"/>
    <addaction name="actionSave_SMT"/>
-   <addaction name="separator"/>
-   <addaction name="actionSort_By"/>
-   <addaction name="separator"/>
-   <addaction name="actionAddPart"/>
-   <addaction name="actionDeleteSelected"/>
-   <addaction name="separator"/>
-   <addaction name="actionFlipH"/>
-   <addaction name="actionFlipV"/>
-   <addaction name="separator"/>
-   <addaction name="actionMove_and_Rotate"/>
-   <addaction name="separator"/>
-   <addaction name="actionBasicSettings"/>
-   <addaction name="actionShow_Groups_Dialog"/>
-   <addaction name="actionBasicGroupsDialog"/>
-   <addaction name="actionChangeGroup"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSort_By"/>
+   <addaction name="actionRotateAll270"/>
+   <addaction name="actionActionRotateAll90"/>
+   <addaction name="actionFlipH"/>
+   <addaction name="actionFlipV"/>
+   <addaction name="actionMove_and_Rotate"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddPart"/>
+   <addaction name="actionDeleteSelected"/>
+   <addaction name="actionRotateC270"/>
+   <addaction name="actionRotateC90"/>
+   <addaction name="actionChangeGroup"/>
+  </widget>
   <action name="actionImport_SMT">
    <property name="icon">
     <iconset resource="icons.qrc">
@@ -556,7 +460,7 @@
   <action name="actionMove_and_Rotate">
    <property name="icon">
     <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/designet.png</normaloff>:/icons/icons/designet.png</iconset>
+     <normaloff>:/icons/icons/Actions-transform-rotate-icon.png</normaloff>:/icons/icons/Actions-transform-rotate-icon.png</iconset>
    </property>
    <property name="text">
     <string>Move and Rotate</string>
@@ -573,11 +477,68 @@
    </property>
   </action>
   <action name="actionChangeGroup">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Video-Reel-icon.png</normaloff>:/icons/icons/Video-Reel-icon.png</iconset>
+   </property>
    <property name="text">
     <string>ChangeGroup</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionSaveToSVG">
+   <property name="text">
+    <string>Save To SVG</string>
+   </property>
+  </action>
+  <action name="actionRotateC90">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/transform-rotate-90-icon.png</normaloff>:/icons/icons/transform-rotate-90-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Selected By 90</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate Selected Items By 90 Degrees</string>
+   </property>
+  </action>
+  <action name="actionRotateC270">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/transform-rotate-270-icon.png</normaloff>:/icons/icons/transform-rotate-270-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Selected By 270</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotates Selected Items By 270 Degrees</string>
+   </property>
+  </action>
+  <action name="actionActionRotateAll90">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/transform-rotate-90-icon.png</normaloff>:/icons/icons/transform-rotate-90-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate All By 90</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotates Whole Board By 90 Degrees</string>
+   </property>
+  </action>
+  <action name="actionRotateAll270">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/transform-rotate-270-icon.png</normaloff>:/icons/icons/transform-rotate-270-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate All By 270</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotates Whole Board By 270 Degrees</string>
    </property>
   </action>
  </widget>

@@ -58,7 +58,6 @@ MainWindow::MainWindow(QWidget *parent) :
     mapper = new QDataWidgetMapper(this);
     mapper2 = new QDataWidgetMapper(this);
     connect(ui->listView, SIGNAL(clicked(QModelIndex)), mapper, SLOT(setCurrentModelIndex(QModelIndex)));
-    connect(ui->cbTape, SIGNAL(currentIndexChanged(int)), this, SLOT(setTape(int)));
     Settings *settings = Settings::Instance();
     settings->loadBasicGroups();
     settings->loadLastFiles();
@@ -66,12 +65,6 @@ MainWindow::MainWindow(QWidget *parent) :
     updateLastFilesMenu();
 
     createShortCuts();
-
-
-    for (int i = 1; i < 25; ++i)
-    {
-        ui->cbTape->addItem(QString::number(i,10));
-    }
 
  }
 
@@ -221,8 +214,8 @@ void MainWindow::loadElement(Chip *chip)
     int id = chip->getGroupID();
     int tape = docWidget->getGroupsModel()->getTapeByID(id);
 
-    ui->cbTape->setCurrentIndex(tape-1);
-    ui->sbAngle->setValue(chip->rotation());
+    ui->lbTape->setText(QString::number(tape));
+    ui->lbAngle->setText(QString::number(chip->rotation()));
     ui->lbDesignator->setText( QString( "%1" ).arg( chip->getDesignator() ) );
 }
 
@@ -264,43 +257,11 @@ void MainWindow::rotate(double angle)
     }
 }
 
-void MainWindow::on_pbSetGroupTape_clicked()
-{
-    if(docWidget)
-    {
-        docWidget->setSelectedTape(ui->sbGroupTape->value());
-    }
-}
-
 void MainWindow::selectAll()
 {
     if(docWidget)
     {
         docWidget->selectAll();
-    }
-}
-
-void MainWindow::on_pbSub90_clicked()
-{
-    if(docWidget)
-    {
-        docWidget->rotateSelectedPersonal(-90);
-    }
-}
-
-void MainWindow::on_pbAdd90_clicked()
-{
-    if(docWidget)
-    {
-        docWidget->rotateSelectedPersonal(90);
-    }
-}
-
-void MainWindow::on_pbRotateAll_clicked()
-{
-    if(docWidget)
-    {
-        rotate(90);
     }
 }
 
@@ -509,14 +470,6 @@ void MainWindow::acceptCoords(QPoint point)
     lbCoords->setText(QString::number(point.x()) + " : " + QString::number(point.y()));
 }
 
-void MainWindow::on_pbRotate_clicked()
-{
-    if(docWidget)
-    {
-        docWidget->testRotate(ui->sbRotateAngle->value());
-    }
-}
-
 void MainWindow::on_actionMove_and_Rotate_triggered()
 {
     if(docWidget)
@@ -524,6 +477,10 @@ void MainWindow::on_actionMove_and_Rotate_triggered()
         if(docWidget->selectedCount() == 2)
         {
             DialogMoveRotate *dialog = new DialogMoveRotate(this);
+            dialog->setFirstXCoord(docWidget->getSelectedElements().at(0)->getCoordX());
+            dialog->setFirstYCoord(docWidget->getSelectedElements().at(0)->getCoordY());
+            dialog->setSecondXCoord(docWidget->getSelectedElements().at(1)->getCoordX());
+            dialog->setSecondYCoord(docWidget->getSelectedElements().at(1)->getCoordY());
 
             if(dialog->exec() == QDialog::Accepted)
             {
@@ -630,14 +587,6 @@ void MainWindow::on_actionBasicGroupsDialog_triggered()
     }
 }
 
-void MainWindow::on_pbRotSel_clicked()
-{
-    if(docWidget)
-    {
-        docWidget->rotateSelected(ui->sbRotateAngle->value());
-    }
-}
-
 void MainWindow::on_actionChangeGroup_triggered()
 {
     if(!docWidget)
@@ -676,4 +625,44 @@ void MainWindow::pasteElements()
 
     docWidget->pasteElements(&clipboard);
     qDebug() << clipboard.length() << " elements pasted";
+}
+
+void MainWindow::on_actionSaveToSVG_triggered()
+{
+    if(docWidget)
+    {
+        docWidget->saveToSVG();
+    }
+}
+
+void MainWindow::on_actionRotateC90_triggered()
+{
+    if(docWidget)
+    {
+        docWidget->rotateSelectedPersonal(90);
+    }
+}
+
+void MainWindow::on_actionRotateC270_triggered()
+{
+    if(docWidget)
+    {
+        docWidget->rotateSelectedPersonal(-90);
+    }
+}
+
+void MainWindow::on_actionActionRotateAll90_triggered()
+{
+    if(docWidget)
+    {
+        docWidget->testRotate(90);
+    }
+}
+
+void MainWindow::on_actionRotateAll270_triggered()
+{
+    if(docWidget)
+    {
+        docWidget->testRotate(-90);
+    }
 }

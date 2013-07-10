@@ -8,6 +8,8 @@ DialogMoveRotate::DialogMoveRotate(QWidget *parent) :
     ui->setupUi(this);
 }
 
+
+
 DialogMoveRotate::~DialogMoveRotate()
 {
     delete ui;
@@ -31,4 +33,24 @@ quint32 DialogMoveRotate::getSecondXCoord()
 quint32 DialogMoveRotate::getSecondYCoord()
 {
     return ui->sbSecondY->value();
+}
+
+void DialogMoveRotate::setFirstXCoord(quint32 x)
+{
+    ui->sbFirstX->setValue(x);
+}
+
+void DialogMoveRotate::setFirstYCoord(quint32 y)
+{
+    ui->sbFirstY->setValue(y);
+}
+
+void DialogMoveRotate::setSecondXCoord(quint32 x)
+{
+    ui->sbSecondX->setValue(x);
+}
+
+void DialogMoveRotate::setSecondYCoord(quint32 y)
+{
+    ui->sbSecondY->setValue(y);
 }

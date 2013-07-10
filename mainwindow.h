@@ -52,16 +52,11 @@ private slots:
     bool tabClose(int index);
     void loadElement(Chip *chip);
     void acceptCoords(QPoint point);
-
     void selectAll();
     void selectionChanged(int count);
     void on_sbZeroX_valueChanged(int );
     void on_sbZeroY_valueChanged(int );
     void on_pbSet_clicked();
-    void on_pbSetGroupTape_clicked();
-    void on_pbSub90_clicked();
-    void on_pbAdd90_clicked();
-    void on_pbRotateAll_clicked();
     void on_actionImport_SMT_triggered();
     void on_actionImport_CSV_triggered();
     void on_actionSave_SMT_triggered();
@@ -72,22 +67,20 @@ private slots:
     void on_actionFlipV_triggered();
     void on_actionDeleteSelected_triggered();
     void on_slPos_valueChanged(int value);
-    void on_pbRotate_clicked();
     void on_actionMove_and_Rotate_triggered();
-
     void on_pbRemoveGroup_clicked();
-
     void on_listView_clicked(const QModelIndex &index);
-
     void on_pbRestore_clicked();
-
     void on_actionShow_Groups_Dialog_triggered();
-
     void on_actionBasicGroupsDialog_triggered();
-
-    void on_pbRotSel_clicked();
-
     void on_actionChangeGroup_triggered();
+    void on_actionSaveToSVG_triggered();
+    void on_actionRotateC90_triggered();
+    void on_actionRotateC270_triggered();
+
+    void on_actionActionRotateAll90_triggered();
+
+    void on_actionRotateAll270_triggered();
 
 private:
     Ui::MainWindow *ui;

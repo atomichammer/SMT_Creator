@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'newpart.ui'
 **
-** Created: Wed 8. May 13:18:32 2013
-**      by: Qt User Interface Compiler version 4.7.3
+** Created by: Qt User Interface Compiler version 4.8.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -97,6 +96,7 @@ public:
 
         cbGroup = new QComboBox(groupBox);
         cbGroup->setObjectName(QString::fromUtf8("cbGroup"));
+        cbGroup->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
 
         gridLayout_2->addWidget(cbGroup, 2, 1, 1, 1);
 

@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'addacldialog.ui'
 **
-** Created: Fri Apr 5 18:01:48 2013
-**      by: Qt User Interface Compiler version 4.8.3
+** Created by: Qt User Interface Compiler version 4.8.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/

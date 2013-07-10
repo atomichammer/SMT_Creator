@@ -39,6 +39,9 @@ private:
     quint32 tape;
     int angle;
     uint group_id;
+    char divisor;
+    int chipWidth;
+    int chipHeight;
 
 };
 

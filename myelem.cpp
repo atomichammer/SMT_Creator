@@ -4,45 +4,50 @@
 #include "settings.h"
 
 Chip::Chip(int x, int y, QString name, int angle)
- {
+{
 
-     color = QColor::fromHsl(0, 255, 125);
+    color = QColor::fromHsl(0, 255, 125);
 
-     this->x = x;
-     this->y = y;     
-     this->tape = 0;
-     setZValue((x + y) % 2);
-     this->setRotation(angle);
-     this->designator = name;
+    divisor = 60;
+    chipWidth = 1.5*197;
+    chipHeight = 3*197;
 
-     this->setTransformOriginPoint(2,4);
+    this->x = x;
+    this->y = y;
+    this->tape = 0;
+    setZValue((x + y) % 2);
+    this->setRotation(angle);
+    this->designator = name;
 
-     setFlags(ItemIsSelectable);
-     setAcceptsHoverEvents(true);
- }
+    this->setTransformOriginPoint(chipWidth/2/divisor, chipHeight/2/divisor);
+
+    setFlags(ItemIsSelectable);
+    setAcceptsHoverEvents(true);
+
+}
 
 void Chip::setCoordX(qint64 _x)
 {
     Settings *settings = Settings::Instance();
     coord_x = _x;
-    setPos((settings->getMaxX() - coord_x)/60, coord_y/60);
+    setPos((settings->getMaxX() - coord_x)/divisor, coord_y/divisor);
 }
 void Chip::setCoordY(qint64 _y)
 {
     Settings *settings = Settings::Instance();
     coord_y = _y;
-    setPos((settings->getMaxX() - coord_x)/60, coord_y/60);
+    setPos((settings->getMaxX() - coord_x)/divisor, coord_y/divisor);
 }
 
  QRectF Chip::boundingRect() const
  {
-     return QRectF(0, 0, 4, 8);
+     return QRectF(0, 0, chipWidth/divisor, chipHeight/divisor);
  }
 
  QPainterPath Chip::shape() const
  {
      QPainterPath path;
-     path.addRect(0, 0, 4, 8);
+     path.addRect(0, 0, chipWidth/divisor, chipHeight/divisor);
      return path;
  }
 
@@ -59,13 +64,13 @@ void Chip::setCoordY(qint64 _y)
      const qreal lod = option->levelOfDetailFromTransform(painter->worldTransform());
      if (lod < 0.2) {
          if (lod < 0.125) {
-             painter->fillRect(QRectF(0, 0, 4, 8), fillColor);
+             painter->fillRect(QRectF(0, 0, chipWidth/divisor, chipHeight/divisor), fillColor);
              return;
          }
 
          QBrush b = painter->brush();
          painter->setBrush(fillColor);
-         painter->drawRect(0, 0, 4, 8);
+         painter->drawRect(0, 0, chipWidth/divisor, chipHeight/divisor);
          painter->setBrush(b);
          return;
      }
@@ -80,7 +85,7 @@ void Chip::setCoordY(qint64 _y)
      QBrush b = painter->brush();
      painter->setBrush(QBrush(fillColor.dark(option->state & QStyle::State_Sunken ? 120 : 100)));
 
-     painter->drawRect(QRect(0, 0, 4, 8));
+     painter->drawRect(QRect(0, 0, chipWidth/divisor, chipHeight/divisor));
      painter->setBrush(b);
 
      if (lod >= 1.5) {
@@ -125,7 +130,7 @@ void Chip::setCoordY(qint64 _y)
          painter->setPen(QColor("black"));
          painter->drawText(x, y+step/lod, QString("%1").arg(designator));
          painter->drawText(x, (y+step*2+10)/lod, QString("%1%2").arg(this->rotation()).arg(QString::fromUtf8("\u00B0")));
-         painter->drawText(x, (y+step*3+20)/lod, QString("%1").arg(group_id));
+         //painter->drawText(x, (y+step*3+20)/lod, QString("%1").arg(group_id));
          painter->restore();
      }
 

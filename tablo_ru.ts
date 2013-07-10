@@ -2,6 +2,74 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="ru_RU">
 <context>
+    <name>AddACLDialog</name>
+    <message>
+        <location filename="addacldialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Диалог</translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="68"/>
+        <source>Ok</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="75"/>
+        <source>Cancel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="91"/>
+        <location filename="addacldialog.ui" line="130"/>
+        <source>&lt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="104"/>
+        <location filename="addacldialog.ui" line="117"/>
+        <source>&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="149"/>
+        <source>Black List</source>
+        <translation>Черный список</translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="217"/>
+        <source>Not Assigned</source>
+        <translation>Не назначены</translation>
+    </message>
+    <message>
+        <location filename="addacldialog.ui" line="248"/>
+        <source>White List</source>
+        <translation>Белый список</translation>
+    </message>
+</context>
+<context>
+    <name>BasicGroupsDialog</name>
+    <message>
+        <location filename="basicgroupsdialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Диалог</translation>
+    </message>
+    <message>
+        <location filename="basicgroupsdialog.ui" line="39"/>
+        <source>Add</source>
+        <translation>Добавить</translation>
+    </message>
+    <message>
+        <location filename="basicgroupsdialog.ui" line="46"/>
+        <source>Remove</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <location filename="basicgroupsdialog.cpp" line="25"/>
+        <source>NewGroup</source>
+        <translation>NewGroup</translation>
+    </message>
+</context>
+<context>
     <name>BasicSettings</name>
     <message>
         <location filename="basicsettings.ui" line="14"/>
@@ -194,6 +262,29 @@
     </message>
 </context>
 <context>
+    <name>ChangeGroupDialog</name>
+    <message>
+        <location filename="changegroupdialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Диалог</translation>
+    </message>
+    <message>
+        <location filename="changegroupdialog.ui" line="30"/>
+        <source>Name:</source>
+        <translation>Имя:</translation>
+    </message>
+    <message>
+        <location filename="changegroupdialog.ui" line="64"/>
+        <source>Tape:</source>
+        <translation>Лента:</translation>
+    </message>
+    <message>
+        <location filename="changegroupdialog.ui" line="83"/>
+        <source>+</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>DialogMoveRotate</name>
     <message>
         <location filename="dialogmoverotate.ui" line="26"/>
@@ -224,25 +315,51 @@
 <context>
     <name>DocumentWidget</name>
     <message>
-        <location filename="documentwidget.cpp" line="202"/>
+        <location filename="documentwidget.cpp" line="328"/>
+        <location filename="documentwidget.cpp" line="369"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="documentwidget.cpp" line="204"/>
+        <location filename="documentwidget.cpp" line="330"/>
         <source>Data(*.qgn)</source>
         <translation>Данные (*.qgn)</translation>
     </message>
     <message>
-        <location filename="documentwidget.cpp" line="222"/>
+        <location filename="documentwidget.cpp" line="358"/>
+        <location filename="documentwidget.cpp" line="527"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="documentwidget.cpp" line="223"/>
+        <location filename="documentwidget.cpp" line="359"/>
+        <source>Cannot write file</source>
+        <translation>Невозможно сохранить файл</translation>
+    </message>
+    <message>
+        <location filename="documentwidget.cpp" line="371"/>
+        <source>Data(*.svg)</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="documentwidget.cpp" line="386"/>
+        <source>SVG Generator Example Drawing</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="documentwidget.cpp" line="387"/>
+        <source>An SVG drawing created by the SVG Generator Example provided with Qt.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="documentwidget.cpp" line="528"/>
+        <source>No Elements Selected!</source>
+        <translation>Ничего не выделено!</translation>
+    </message>
+    <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>Не можно записать файл %1:%2.</translation>
+        <translation type="obsolete">Не можно записать файл %1:%2.</translation>
     </message>
 </context>
 <context>
@@ -281,14 +398,54 @@
 <context>
     <name>GroupEdit</name>
     <message>
-        <location filename="groupedit.ui" line="14"/>
+        <location filename="groupedit.ui" line="20"/>
         <source>Dialog</source>
         <translation>Диалог</translation>
     </message>
     <message>
-        <location filename="groupedit.ui" line="20"/>
+        <location filename="groupedit.ui" line="32"/>
+        <source>List of imported groups</source>
+        <translation>Список импортированных групп</translation>
+    </message>
+    <message>
         <source>Groups List:</source>
-        <translation>Список Групп</translation>
+        <translation type="obsolete">Список Групп</translation>
+    </message>
+</context>
+<context>
+    <name>GroupsACLModel</name>
+    <message>
+        <location filename="groupsaclmodel.cpp" line="122"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="groupsaclmodel.cpp" line="126"/>
+        <source>Tape</source>
+        <translation>Лента</translation>
+    </message>
+</context>
+<context>
+    <name>GroupsModel</name>
+    <message>
+        <location filename="groupsmodel.cpp" line="182"/>
+        <source>id</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="groupsmodel.cpp" line="186"/>
+        <source>Tape</source>
+        <translation>Лента</translation>
+    </message>
+    <message>
+        <location filename="groupsmodel.cpp" line="190"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="groupsmodel.cpp" line="193"/>
+        <source>Vis</source>
+        <translation>Вид</translation>
     </message>
 </context>
 <context>
@@ -311,41 +468,29 @@
         <translation type="obsolete">Опции 1</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="223"/>
         <source>Set Tape</source>
-        <translation>Лента</translation>
+        <translation type="obsolete">Лента</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="230"/>
+        <location filename="mainwindow.ui" line="243"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="237"/>
         <source>Restore</source>
-        <translation>Вернуть</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="244"/>
-        <source>-90</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="251"/>
-        <source>+90</source>
-        <translation></translation>
+        <translation type="obsolete">Вернуть</translation>
     </message>
     <message>
         <source>Total Parts:</source>
         <translation type="obsolete">Всего з/ч:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="185"/>
+        <location filename="mainwindow.ui" line="201"/>
         <source>Single</source>
         <translation>Один</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="175"/>
+        <location filename="mainwindow.ui" line="191"/>
         <source>Multi</source>
         <translation>Все</translation>
     </message>
@@ -358,14 +503,12 @@
         <translation type="obsolete">Текущая</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="168"/>
-        <location filename="mainwindow.ui" line="327"/>
+        <location filename="mainwindow.ui" line="184"/>
         <source>X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="161"/>
-        <location filename="mainwindow.ui" line="334"/>
+        <location filename="mainwindow.ui" line="171"/>
         <source>Y</source>
         <translation></translation>
     </message>
@@ -383,7 +526,7 @@
         <translation type="obsolete">Лента</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="112"/>
+        <location filename="mainwindow.ui" line="124"/>
         <source>Set</source>
         <translation>Установить</translation>
     </message>
@@ -392,168 +535,255 @@
         <translation type="obsolete">Угол</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="98"/>
+        <location filename="mainwindow.ui" line="104"/>
         <source>Name:</source>
         <translation>Имя:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="105"/>
+        <location filename="mainwindow.ui" line="117"/>
         <source>Tape:</source>
         <translation>Лента:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="119"/>
+        <location filename="mainwindow.ui" line="137"/>
         <source>Angle:</source>
         <translation>Угол:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="207"/>
+        <location filename="mainwindow.ui" line="237"/>
         <source>Groups</source>
         <translation>Группы</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="280"/>
         <source>Rotate</source>
-        <translation>Повернуть</translation>
+        <translation type="obsolete">Повернуть</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="321"/>
-        <location filename="mainwindow.ui" line="523"/>
-        <location filename="mainwindow.ui" line="526"/>
+        <location filename="mainwindow.ui" line="421"/>
+        <location filename="mainwindow.ui" line="424"/>
         <source>Basic Settings</source>
         <translation>Базовые Настройки</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="416"/>
+        <location filename="mainwindow.ui" line="282"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="428"/>
+        <location filename="mainwindow.ui" line="295"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="472"/>
+        <location filename="mainwindow.ui" line="330"/>
+        <source>toolBar</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="347"/>
+        <source>toolBar_2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="367"/>
         <source>Import SMT</source>
         <translation>Импорт SMT</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="481"/>
+        <location filename="mainwindow.ui" line="376"/>
         <source>Import CSV</source>
         <translation>Импорт CSV</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="490"/>
+        <location filename="mainwindow.ui" line="385"/>
         <source>Save SMT</source>
         <translation>Сохранить SMT</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="499"/>
+        <location filename="mainwindow.ui" line="394"/>
         <source>Sort By</source>
         <translation>Сортировать по</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="502"/>
+        <location filename="mainwindow.ui" line="397"/>
         <source>Sort place order</source>
         <translation>Сортировать</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="511"/>
-        <location filename="mainwindow.ui" line="514"/>
+        <location filename="mainwindow.ui" line="406"/>
+        <location filename="mainwindow.ui" line="409"/>
         <source>Add Element</source>
         <translation>Добавить Элемент</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="535"/>
+        <location filename="mainwindow.ui" line="412"/>
+        <source>Ctrl+=</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="433"/>
         <source>Mirror Horizontally</source>
         <translation>Отразить Горизонтально</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="544"/>
+        <location filename="mainwindow.ui" line="442"/>
         <source>Mirror Vertically</source>
         <translation>Отразить Вертикально</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="553"/>
+        <location filename="mainwindow.ui" line="451"/>
         <source>Delete Selected Chips</source>
         <translation>Удалить Выбранные Элементы</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="556"/>
+        <location filename="mainwindow.ui" line="454"/>
         <source>Deletes Selected Items</source>
         <translation>Удалить Выбранные Элементы</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="565"/>
+        <location filename="mainwindow.ui" line="457"/>
+        <source>Del</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="466"/>
         <source>Move and Rotate</source>
         <translation>Подвинуть И Повернуть</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="471"/>
+        <source>Show Groups Dialog</source>
+        <translation>Показать список групп</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="476"/>
+        <source>Show Basic Groups Dialog</source>
+        <translation>Показать список основных групп</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="485"/>
+        <source>ChangeGroup</source>
+        <translation>Сменить Группу</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="488"/>
+        <source>Ctrl+G</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="493"/>
+        <source>Save To SVG</source>
+        <translation>Сохранить в SVG</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="502"/>
+        <source>Rotate Selected By 90</source>
+        <translation>Повернуть Выбранные На 90</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="505"/>
+        <source>Rotate Selected Items By 90 Degrees</source>
+        <translation>Повернуть Выделенные Элементы На 90 Градусов</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="514"/>
+        <source>Rotate Selected By 270</source>
+        <translation>Повернуть Выбранные На 270</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="517"/>
+        <source>Rotates Selected Items By 270 Degrees</source>
+        <translation>Повернуть Выделенные Элементы На 270 Градусов</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="526"/>
+        <source>Rotate All By 90</source>
+        <translation>Повернуть Все на 90</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="529"/>
+        <source>Rotates Whole Board By 90 Degrees</source>
+        <translation>Повернуть Всю Плату На 90 Градусов</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="538"/>
+        <source>Rotate All By 270</source>
+        <translation>Повернуть Все На 270</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="541"/>
+        <source>Rotates Whole Board By 270 Degrees</source>
+        <translation>Повернуть Всю Плату На 270 Градусов</translation>
     </message>
     <message>
         <source>TextLabel</source>
         <translation type="obsolete">Метка</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="374"/>
         <source>Steps per mm:</source>
-        <translation>Шагов на мм</translation>
+        <translation type="obsolete">Шагов на мм</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="39"/>
+        <location filename="mainwindow.cpp" line="43"/>
         <source>Ctrl+A</source>
         <comment>Select All</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="42"/>
+        <location filename="mainwindow.cpp" line="46"/>
         <source>Count: 0</source>
         <translation>Всего: 0</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="45"/>
+        <location filename="mainwindow.cpp" line="49"/>
         <source>Selected: 0</source>
         <translation>Выбрано: 0</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="47"/>
+        <location filename="mainwindow.cpp" line="51"/>
         <source>0:0</source>
         <translation>0:0</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="64"/>
+        <location filename="mainwindow.cpp" line="119"/>
+        <source>&amp;%1 %2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="158"/>
         <source>Select Coords File</source>
         <translation>Выбери файл С координатами</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="66"/>
+        <location filename="mainwindow.cpp" line="160"/>
         <source>Data (*.%1)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="310"/>
-        <location filename="mainwindow.cpp" line="388"/>
+        <location filename="mainwindow.cpp" line="358"/>
+        <location filename="mainwindow.cpp" line="435"/>
         <source>Selected: %1</source>
         <translation>Выбрано: %1</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="344"/>
+        <location filename="mainwindow.cpp" line="392"/>
         <source>The document has been modified.
 Do you want to save your changes?</source>
         <translation>Документ был изменен.
 Сохранить изменения?</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="387"/>
+        <location filename="mainwindow.cpp" line="434"/>
         <source>Count: %1</source>
         <translation>Всего: %1</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="442"/>
+        <location filename="mainwindow.cpp" line="496"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="442"/>
+        <location filename="mainwindow.cpp" line="496"/>
         <source>Must select 2 items!</source>
         <translation>Нужно выделить два элемента!</translation>
     </message>
@@ -562,7 +792,7 @@ Do you want to save your changes?</source>
         <translation type="obsolete">Данные (*.qgn)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="82"/>
+        <location filename="mainwindow.cpp" line="190"/>
         <source>Unable to open file!</source>
         <translation>Не можно открыть файл!</translation>
     </message>
@@ -583,7 +813,7 @@ Do you want to save your changes?</source>
         <translation type="obsolete">Данные (*.qgn)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="343"/>
+        <location filename="mainwindow.cpp" line="391"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
@@ -596,42 +826,47 @@ Do you want to save your changes?</source>
 <context>
     <name>Newpart</name>
     <message>
-        <location filename="newpart.ui" line="20"/>
+        <location filename="newpart.ui" line="26"/>
         <source>Dialog</source>
         <translation>Диалог</translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="36"/>
+        <location filename="newpart.ui" line="42"/>
         <source>Element</source>
         <translation>Элемент</translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="42"/>
+        <location filename="newpart.ui" line="48"/>
         <source>X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="56"/>
+        <location filename="newpart.ui" line="62"/>
         <source>Y</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="70"/>
+        <location filename="newpart.ui" line="76"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="80"/>
+        <location filename="newpart.ui" line="86"/>
         <source>Angle</source>
         <translation>Угол</translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="97"/>
+        <location filename="newpart.ui" line="103"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="newpart.ui" line="121"/>
+        <location filename="newpart.ui" line="110"/>
+        <source>R0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="newpart.ui" line="140"/>
         <source>Tape</source>
         <translation>Лента</translation>
     </message>

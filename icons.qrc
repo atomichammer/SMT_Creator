@@ -24,5 +24,10 @@
         <file>icons/sort-ascending-icon.png</file>
         <file>icons/Actions-object-flip-horizontal-icon.png</file>
         <file>icons/Actions-object-flip-vertical-icon.png</file>
+        <file>icons/Video-Reel-icon.png</file>
+        <file>icons/move-icon.png</file>
+        <file>icons/Actions-transform-rotate-icon.png</file>
+        <file>icons/transform-rotate-90-icon.png</file>
+        <file>icons/transform-rotate-270-icon.png</file>
     </qresource>
 </RCC>

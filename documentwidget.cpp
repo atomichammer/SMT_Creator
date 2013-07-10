@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QtSvg/QSvgGenerator>
 #include "fnumber.h"
 #include "qmath.h"
 #include "savetobinary.h"
@@ -16,6 +17,7 @@ DocumentWidget::DocumentWidget(QWidget *parent, QString filename) :
     //Settings *settings = Settings::Instance();
 
     elem = new Elements();
+    divisor = 60;
 
     if(info->suffix() == "qgn")
     {
@@ -53,10 +55,10 @@ void DocumentWidget::drawBorders()
     Settings *settings = Settings::Instance();
     //whole field
     QPen pen(QColor("black"));
-    QGraphicsRectItem *bg = scene->addRect(0, 0, settings->getMaxX()/60, settings->getMaxY()/60, pen );
+    QGraphicsRectItem *bg = scene->addRect(0, 0, settings->getMaxX()/divisor, settings->getMaxY()/divisor, pen );
     //zero based field
     pen.setColor(QColor("red"));
-    QGraphicsRectItem *bg2 = scene->addRect((settings->getMaxX()-settings->getZeroX())/60, settings->getZeroY()/60, (settings->getZeroX())/60, (settings->getMaxY()-settings->getZeroY())/60, pen );
+    QGraphicsRectItem *bg2 = scene->addRect((settings->getMaxX()-settings->getZeroX())/divisor, settings->getZeroY()/divisor, (settings->getZeroX())/divisor, (settings->getMaxY()-settings->getZeroY())/divisor, pen );
     bg->setFlag(QGraphicsItem::ItemIsSelectable, false);
     bg2->setFlag(QGraphicsItem::ItemIsSelectable, false);
 }
@@ -360,6 +362,36 @@ bool DocumentWidget::saveToBinary(QString fileName, int num, bool selectedOnly)
     return true;
 }
 
+bool DocumentWidget::saveToSVG()
+{
+    QFileDialog *dialog = new QFileDialog();
+    dialog->setDefaultSuffix("svg");
+    QString fileName = dialog->getSaveFileName(this, tr("Save File"),
+                                               "noname",
+                                                tr("Data(*.svg)"));
+    if (fileName.isEmpty())
+            return false;
+
+    delete dialog;
+
+    QSvgGenerator svgGen;
+
+    svgGen.setFileName( fileName );
+//    int res = (1250 * 25.4) / 380.7;
+    float x = 197/(float)divisor;
+    float y = 25.4;
+    int res = x * y;
+    svgGen.setSize(QSize(75000/divisor, 75000/divisor));
+    svgGen.setViewBox(QRect(0, 0, 75000/divisor, 75000/divisor));
+    svgGen.setTitle(tr("SVG Generator Example Drawing"));
+    svgGen.setDescription(tr("An SVG drawing created by the SVG Generator "
+                                "Example provided with Qt."));
+    svgGen.setResolution(res);
+    qDebug() << "Resolution: " << svgGen.resolution();
+
+    QPainter painter( &svgGen );
+    scene->render( &painter );
+}
 
 //bool DocumentWidget::saveToBinary(QString fileName, int num, bool selectedOnly)
 //{
@@ -490,6 +522,13 @@ void DocumentWidget::rotateSelectedPersonal(int angle)
     QList<Chip*> chips = elem->getSelectedChips();
     int count = chips.count();
 
+    if(count <= 0)
+    {
+        QMessageBox::warning(this, tr("Application"),
+        tr("No Elements Selected!"));
+        return;
+    }
+
     for(int i = 0; i < count; i++)
     {
         chip = chips.at(i);
@@ -528,5 +567,5 @@ void DocumentWidget::acceptCoords(QPointF point)
 {
     Settings *settings = Settings::Instance();
 
-    emit mousePos(QPoint(round(settings->getMaxX() - point.x()*60), round(point.y()*60)));
+    emit mousePos(QPoint(round(settings->getMaxX() - point.x()*divisor), round(point.y()*divisor)));
 }

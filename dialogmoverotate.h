@@ -19,6 +19,11 @@ public:
     quint32 getFirstYCoord();
     quint32 getSecondXCoord();
     quint32 getSecondYCoord();
+    void    setFirstXCoord(quint32 x);
+    void    setFirstYCoord(quint32 y);
+    void    setSecondXCoord(quint32 x);
+    void    setSecondYCoord(quint32 y);
+
 private:
     Ui::DialogMoveRotate *ui;
 };

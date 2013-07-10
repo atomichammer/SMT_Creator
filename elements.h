@@ -70,6 +70,7 @@ private:
     QList<int> list;
     QList<QColor> colors;
     GroupsModel *groupsModel;
+    char divisor;
 };
 
 #endif // ELEMENTS_H
